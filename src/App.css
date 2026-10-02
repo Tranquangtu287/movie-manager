@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app.light {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Chia bố cục 2 cột giống hình mẫu của cô */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.movie-list {
+  flex: 1;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* Khung chi tiết phim nằm ở cột bên phải */
+.movie-detail-section {
+  flex: 1;
+  border: 2px dashed #333;
+  padding: 20px;
+  border-radius: 4px;
+  position: sticky;
+  top: 20px;
+}
+
+.app.dark .movie-card {
+  border-color: #444;
+  background-color: #2a2a2a;
+}
+
+.app.dark .movie-detail-section {
+  border-color: #777;
+  background-color: #2a2a2a;
 }
